@@ -1,0 +1,17 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "./js",
+        "sourceMap": true,
+        "watch": true
+    
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": []
+}
