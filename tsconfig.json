@@ -1,17 +1,12 @@
 {
-    "compileOnSave": true,
     "compilerOptions": {
-        "module": "es6",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "outDir": "./js",
-        "sourceMap": true,
-        "watch": true
-    
+        "module": "CommonJS", // L'utilisation de 'import from' sera transformé en require pour node
+        "esModuleInterop": true, // Permet d'importer directement des modules, pas juste des classes ou des types. Comme par exemple : "import express from 'express'"
+        "outDir": "dist",
+        "target": "es6",
+        "strict": true
     },
-    "include": [
+    "include" : [
         "src/**/*.ts"
-    ],
-    "exclude": ["node_modules"]
+    ]
 }
