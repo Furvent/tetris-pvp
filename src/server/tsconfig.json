@@ -1,0 +1,10 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "module": "CommonJS", // L'utilisation de 'import from' sera transformé en require pour node
+        "esModuleInterop": true // Permet d'importer directement des modules, pas juste des classes ou des types. Comme par exemple : "import express from 'express'"
+    },
+    "include" : [
+        "./**/*.ts"
+    ]
+}

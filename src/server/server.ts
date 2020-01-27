@@ -1,8 +1,8 @@
 import { Response, Request } from "express"
-import http from 'http'
-import socketIo from 'socket.io'
+import Http from 'http'
+import SocketIo from 'socket.io'
 
-import express from 'express'
+import Express from 'express'
 
 export default class Server {
 
@@ -12,9 +12,9 @@ export default class Server {
     }
 
     public start() {
-        const app = express()
-        const serverHttp = http.createServer(app)
-        const io = socketIo(serverHttp)
+        const app = Express()
+        const serverHttp = Http.createServer(app)
+        const io = SocketIo(serverHttp)
         app.get('/status', (req: Request, res: Response) => {
             res.send('Server running')
         })

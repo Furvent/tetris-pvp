@@ -1,18 +1,13 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const http_1 = __importDefault(require("http"));
-const socket_io_1 = __importDefault(require("socket.io"));
-const express_1 = __importDefault(require("express"));
-class Server {
+import Http from 'http';
+import SocketIo from 'socket.io';
+import Express from 'express';
+export default class Server {
     constructor() {
     }
     start() {
-        const app = express_1.default();
-        const serverHttp = http_1.default.createServer(app);
-        const io = socket_io_1.default(serverHttp);
+        const app = Express();
+        const serverHttp = Http.createServer(app);
+        const io = SocketIo(serverHttp);
         app.get('/status', (req, res) => {
             res.send('Server running');
         });
@@ -24,5 +19,4 @@ class Server {
         });
     }
 }
-exports.default = Server;
 Server.PORT = 7070;

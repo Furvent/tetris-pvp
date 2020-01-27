@@ -1,10 +1,7 @@
 {
     "extends": "../../tsconfig",
     "compilerOptions": {
-        "module": "ES2015",
-        "outDir": "dist",
-        "target": "es6",
-        "strict": true
+        "module": "ES2015"
     },
     "include" : [
         "./**/*.ts"
