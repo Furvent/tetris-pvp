@@ -1,7 +1,8 @@
 {
     "extends": "../../tsconfig",
     "compilerOptions": {
-        "module": "ES2015"
+        "module": "ES2015",
+        "strict": false
     },
     "include" : [
         "./**/*.ts"
